@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/spos_bg">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/d30" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/d30" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/d30" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/d1280" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/d1310" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ll_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_b"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_l"
+        app:layout_constraintRight_toRightOf="@+id/guideline_r"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/d1220"
+            android:layout_height="@dimen/d120"
+            android:background="@drawable/shape_corner20_top_blue"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/d180"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/d30"
+            android:text="付款方式"
+            android:textColor="#666666"
+            android:textSize="@dimen/s30"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="@dimen/d200"
+            android:layout_height="wrap_content"
+            android:text="付款名称"
+            android:textColor="#666666"
+            android:textSize="@dimen/s30"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="@dimen/d180"
+            android:layout_height="wrap_content"
+            android:text="券号码"
+            android:textColor="#666666"
+            android:textSize="@dimen/s30"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="@dimen/d178"
+            android:layout_height="wrap_content"
+            android:text="券名称"
+            android:textColor="#666666"
+            android:textSize="@dimen/s30"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="@dimen/d212"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="@dimen/d40"
+            android:text="退款金额(元)"
+            android:textColor="#666666"
+            android:textSize="@dimen/s30"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="备注"
+            android:textColor="#666666"
+            android:textSize="@dimen/s30"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toEndOf="@+id/textView6" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_corner20_bottom_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/d1250" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_m2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/d1280" />
+
+
+        <TextView
+            android:id="@+id/tv_goods_name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d126"
+            android:background="@drawable/shape_corner20_top_white"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/d30"
+            android:paddingRight="@dimen/d30"
+            android:textColor="#333333"
+            android:textSize="@dimen/s36"
+            app:layout_constraintLeft_toRightOf="@+id/guideline_m"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#fff"
+            app:layout_constraintBottom_toTopOf="@+id/btn_confirm"
+            app:layout_constraintLeft_toRightOf="@+id/guideline_m"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_goods_name" />
+
+        <TextView
+            android:id="@+id/single_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#787878"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toStartOf="@+id/guideline_m2"
+            app:layout_constraintTop_toTopOf="@+id/view1"
+            tools:text="11111" />
+
+        <TextView
+            android:id="@+id/goods_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/d30"
+            android:textColor="#787878"
+            android:textSize="@dimen/s24"
+            app:layout_constraintRight_toRightOf="@+id/view1"
+            app:layout_constraintTop_toTopOf="@+id/single_price"
+            tools:text="111" />
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实付: "
+            android:textColor="#333333"
+            android:textSize="@dimen/s27"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_real_pay"
+            app:layout_constraintStart_toStartOf="@+id/guideline_m2"
+            app:layout_constraintTop_toTopOf="@+id/tv_real_pay" />
+
+        <TextView
+            android:id="@+id/tv_real_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d24"
+            android:textColor="#FF6600"
+            android:textSize="@dimen/s36"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/single_price"
+            tools:text="111" />
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d61"
+            android:text="退货单号: "
+            android:textColor="#787878"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toStartOf="@+id/guideline_m2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_real_pay" />
+
+
+        <TextView
+            android:id="@+id/tv_refund_order_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="@+id/textView9"
+            tools:text="12345" />
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d6"
+            android:text="退货模式: "
+            android:textColor="#787878"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toStartOf="@+id/guideline_m2"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/tv_create_ordertype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
+            app:layout_constraintTop_toTopOf="@+id/textView11"
+            tools:text="C店订单" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d6"
+            android:text="会员卡号: "
+            android:textColor="#787878"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toStartOf="@+id/guideline_m2"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+        <TextView
+            android:id="@+id/tv_memcard_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toTopOf="@+id/textView12"
+            tools:text="12345" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d6"
+            android:text="顾客姓名: "
+            android:textColor="#787878"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toStartOf="@+id/guideline_m2"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/tv_custname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toEndOf="@+id/textView13"
+            app:layout_constraintTop_toTopOf="@+id/textView13"
+            tools:text="小红" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d6"
+            android:text="原POS单号: "
+            android:textColor="#787878"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toStartOf="@+id/guideline_m2"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/tv_pos_orderid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toTopOf="@+id/textView14"
+            tools:text="12345" />
+
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d6"
+            android:text="销售日期: "
+            android:textColor="#787878"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toStartOf="@+id/guideline_m2"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/tv_order_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toEndOf="@+id/textView15"
+            app:layout_constraintTop_toTopOf="@+id/textView15"
+            tools:text="11111" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d6"
+            android:text="销售人员: "
+            android:textColor="#787878"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toStartOf="@+id/guideline_m2"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/tv_sale_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="@dimen/s24"
+            app:layout_constraintStart_toEndOf="@+id/textView16"
+            app:layout_constraintTop_toTopOf="@+id/textView16"
+            tools:text="小王" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/d96"
+            android:background="@drawable/shape_corner20_bottom_green"
+            android:text="确定"
+            android:textColor="#fff"
+            android:textSize="@dimen/s40"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_m"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.Group
+        android:visibility="invisible"
+        app:constraint_referenced_ids="view_empty,iv_empty,tv_notify"
+        android:id="@+id/ll_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        app:layout_constraintLeft_toRightOf="@+id/guideline_l"
+        app:layout_constraintRight_toRightOf="@+id/guideline_r"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_b"
+        android:id="@+id/view_empty"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_corner"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="@dimen/d432"
+        android:layout_height="@dimen/d360"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/missing_search"
+        app:layout_constraintBottom_toTopOf="@+id/tv_notify"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_r"
+        app:layout_constraintStart_toStartOf="@+id/guideline_l"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/d42"
+        android:layout_marginTop="@dimen/d6"
+        android:text="请先输入查询条件"
+        android:textColor="#999999"
+        android:textSize="@dimen/s30"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_b"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_empty"
+        app:layout_constraintRight_toRightOf="@+id/iv_empty"
+        app:layout_constraintTop_toBottomOf="@+id/iv_empty" />
+
+
+</android.support.constraint.ConstraintLayout>
+
